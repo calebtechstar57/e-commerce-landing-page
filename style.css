@@ -15,6 +15,7 @@ body {
 }
 
 /* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -26,6 +27,11 @@ body {
   top: 0;
   z-index: 10;
 }
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 .logo p {
   font-size: 1.5rem;
@@ -33,25 +39,69 @@ body {
   color: #007bff;
 }
 
-.nav a {
-  text-decoration: none;
-  margin-left: 20px;
-  color: #333;
-  /* font-weight: 400; */
-  display: inline;
+.search-box {
+  position: relative;
+  width: 250px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+  overflow: hidden;
+  /* padding-left: 15px; */
+}
+.search-icon {
+  width: 16px;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.search-input {
+  background-color: transparent;
+  padding: 10px 12px 10px 40px;
+  border-radius: 16px;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
 }
 
-.nav a.cart {
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.header-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-nav-links a {
+  text-decoration: none;
+}
+
+.cart-link {
+  display: flex;
+
+  align-items: center;
   background: #007bff;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  position: relative;
 }
 
-.nav a:hover {
-  color: #007bff;
+.cart-quantity {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 2px;
+  left: 28px;
 }
 
+.cart-icon {
+  width: 28px;
+}
 /* Hero Section */
 
 .hero {
@@ -175,6 +225,18 @@ body {
 }
 
 /* Responsive tweaks */
+
+@media (max-width: 768px) {
+  .search-box {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+  .search-input {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 1.8rem;
@@ -184,8 +246,9 @@ body {
     font-size: 1rem;
   }
 }
-@media (max-width: 420px) {
-  .nav a.cart {
-    display: none;
+@media (max-width: 400px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
   }
 }
