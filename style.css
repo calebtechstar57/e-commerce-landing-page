@@ -105,9 +105,8 @@ body {
 /* Hero Section */
 
 .hero {
-  background: url("https://via.placeholder.com/1200x400") center/cover no-repeat;
+  background: url("./Annotation 2025-09-14 112124.png") center/cover no-repeat;
   height: 400px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +140,7 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-content button {
+.hero-btn {
   background: #007bff;
   color: #fff;
   border: none;
@@ -150,7 +149,7 @@ body {
   cursor: pointer;
 }
 
-.hero-content button:hover {
+.hero-btn:hover {
   background: #0056b3;
 }
 
