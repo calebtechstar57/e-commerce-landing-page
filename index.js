@@ -16,10 +16,18 @@ products.forEach((product) => {
   const { name, price, image } = product;
   productHml += `
     <div class="product-card">
-      <img src="${image}" alt="${name}" />
-      <h3>${name}</h3>
-      <p>$${price.toFixed(2)}</p>
-      <button>Buy Now</button>
+      <div class="product-image_wrapper">
+        <img class="product-image" src="${image}" alt="${name}" />
+      </div>  
+      <div class="product-details">
+        <span class="product-name">${name}</span>
+        <span class="product-price">$${price.toFixed(2)}</span>
+        <div class="product-action">
+          <button  class="production-action_btn">
+            Add to cart
+          </button>
+        </div>
+      </div>
     </div>
   `;
 });
