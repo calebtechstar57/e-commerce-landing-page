@@ -33,3 +33,7 @@ products.forEach((product) => {
 });
 
 prodouctGrid.innerHTML = productHml;
+const currentYear = new Date().getFullYear();
+const footerCopyright = document.querySelector(".footer-copyright");
+
+footerCopyright.innerHTML = `&copy; ${currentYear} ShopMate. All rights reserved.`;
